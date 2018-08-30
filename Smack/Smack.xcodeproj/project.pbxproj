@@ -19,6 +19,7 @@
 		E68AD100212DF1FF007C6D2F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E68AD0FF212DF1FF007C6D2F /* SWRevealViewController.m */; };
 		E68AD103212F5DFE007C6D2F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68AD102212F5DFD007C6D2F /* GradientView.swift */; };
 		E6E280E72135F686007340A2 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E280E62135F686007340A2 /* CreateAccountVC.swift */; };
+		E6E280EA2138A725007340A2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E280E92138A725007340A2 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E68AD101212DF281007C6D2F /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Smack-Bridging-Header.h"; path = "Supporting Files/Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		E68AD102212F5DFD007C6D2F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E6E280E62135F686007340A2 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		E6E280E92138A725007340A2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EC38AE85953298681621BB1F /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A01C28F7DA3E59401BF146 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 		E68AD0D9212CBCC7007C6D2F /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				E6E280E82138A6FC007340A2 /* Services */,
 				E6523006212F693A00FA2380 /* Utilities */,
 				E68AD0FD212DF1DA007C6D2F /* Supporting Files */,
 				E68AD0F3212CC99E007C6D2F /* Model */,
@@ -148,6 +151,14 @@
 				E68AD101212DF281007C6D2F /* Smack-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6E280E82138A6FC007340A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E6E280E92138A725007340A2 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				E68AD0F7212CC9CC007C6D2F /* ChannelVC.swift in Sources */,
 				E68AD0F5212CC9BD007C6D2F /* ChatVC.swift in Sources */,
 				E6E280E72135F686007340A2 /* CreateAccountVC.swift in Sources */,
+				E6E280EA2138A725007340A2 /* AuthService.swift in Sources */,
 				E652300A212F6F5E00FA2380 /* LoginVC.swift in Sources */,
 				E68AD103212F5DFE007C6D2F /* GradientView.swift in Sources */,
 				E68AD0DB212CBCC7007C6D2F /* AppDelegate.swift in Sources */,
