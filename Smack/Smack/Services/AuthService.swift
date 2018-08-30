@@ -58,10 +58,10 @@ class AuthService {
             { (response) in
                 
                 if response.result.error == nil {
-                     completion(true)
+                    completion(true)
                 } else {
-                    return completion(false)
-                    (response.result.error as Any)
+                    completion(false)
+                    debugPrint(response.result.error as Any)
                 }
             }
     }

@@ -154,7 +154,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-Ll-2Zg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-Ll-2Zg" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="51.5" y="347" width="272" height="61"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.61960784310000006" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -310,7 +310,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4F-Sc-AML">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4F-Sc-AML" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="51" y="568" width="272" height="61"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.61960784310000006" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -321,6 +321,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="j4E-XQ-Ed3" eventType="touchUpInside" id="fk8-5G-XrD"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-W5-vz9">
                                 <rect key="frame" x="16" y="142" width="343" height="134"/>
@@ -353,7 +356,7 @@
                                             <constraint firstAttribute="height" constant="2" id="UES-8S-XQB"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yo-aJ-y6T">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yo-aJ-y6T" userLabel="pass">
                                         <rect key="frame" x="0.0" y="101" width="343" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -407,6 +410,9 @@
                                         <state key="normal" title="Choose avatar">
                                             <color key="titleColor" red="0.42352941179999998" green="0.61960784310000006" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAvatarPressed:" destination="j4E-XQ-Ed3" eventType="touchUpInside" id="fOt-xq-wve"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dt-9k-hYW">
                                         <rect key="frame" x="0.0" y="120" width="292" height="25"/>
@@ -417,6 +423,9 @@
                                         <state key="normal" title="Generate background color">
                                             <color key="titleColor" red="0.42352941179999998" green="0.61960784310000006" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseBGColorPressed:" destination="j4E-XQ-Ed3" eventType="touchUpInside" id="J30-84-T3p"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -437,6 +446,10 @@
                         <viewLayoutGuide key="safeArea" id="I78-wW-83g"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="fOv-nK-1Qw" id="gX3-2L-BrG"/>
+                        <outlet property="passTxt" destination="5yo-aJ-y6T" id="NCD-C4-kWY"/>
+                        <outlet property="userImg" destination="vcE-g5-rty" id="Hk7-Dn-e3f"/>
+                        <outlet property="usernameTxt" destination="kqF-gn-uh9" id="rZB-Fy-HPG"/>
                         <segue destination="zTO-Zd-Omx" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSeque:" id="o2g-EN-Ksr"/>
                     </connections>
                 </viewController>
