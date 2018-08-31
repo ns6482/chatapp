@@ -13,6 +13,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 // URL constnts
 let BASE_URL = "https://chatsterchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
+let URL_LOGIN = "\(BASE_URL)account/login"
 // Seques
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"

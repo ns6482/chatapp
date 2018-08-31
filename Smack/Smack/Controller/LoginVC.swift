@@ -10,6 +10,12 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    // Outlets
+    
+    @IBOutlet weak var usernameTxt: UITextField!
+    
+    @IBOutlet weak var passwordTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +24,14 @@ class LoginVC: UIViewController {
 
     @IBAction func closePressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        
+        guard let username = usernameTxt.text, usernameTxt.text != "" else {return}
+        guard let pass = passwordTxt.text, passwordTxt.text != "" else {return}
+
+        
     }
     
     @IBAction func createAccountButtonPressed(_ sender: Any) {
