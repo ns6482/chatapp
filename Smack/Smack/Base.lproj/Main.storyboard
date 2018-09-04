@@ -53,7 +53,7 @@
                                 <rect key="frame" x="285" y="82.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-Tz-n2m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-Tz-n2m" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="10" y="582" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="9pr-Ik-jWl"/>
@@ -489,11 +489,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AsP-dD-S3A">
                                 <rect key="frame" x="41.5" y="319" width="292" height="145"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="vcE-g5-rty">
-                                        <rect key="frame" x="63.5" y="0.0" width="165" height="75"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="vcE-g5-rty" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
+                                        <rect key="frame" x="108.5" y="0.0" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="BK9-dZ-j5f"/>
-                                            <constraint firstAttribute="width" constant="165" id="hkF-cc-bF4"/>
+                                            <constraint firstAttribute="width" constant="75" id="hkF-cc-bF4"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNq-f8-9Mr">
@@ -524,25 +524,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8Gn-Tk-62a">
+                                <rect key="frame" x="177" y="248" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="AsP-dD-S3A" firstAttribute="top" secondItem="8Gn-Tk-62a" secondAttribute="bottom" constant="51" id="8iN-dd-pKZ"/>
+                            <constraint firstItem="I78-wW-83g" firstAttribute="trailing" secondItem="8Gn-Tk-62a" secondAttribute="trailing" constant="178" id="E2x-YZ-CW9"/>
                             <constraint firstItem="hQX-W5-vz9" firstAttribute="centerX" secondItem="Eav-wJ-kKZ" secondAttribute="centerX" id="FAl-4I-rpl"/>
                             <constraint firstItem="R4F-Sc-AML" firstAttribute="centerX" secondItem="Eav-wJ-kKZ" secondAttribute="centerX" id="GkJ-3k-jpS"/>
                             <constraint firstItem="AsP-dD-S3A" firstAttribute="centerX" secondItem="Eav-wJ-kKZ" secondAttribute="centerX" id="I2W-PZ-O9e"/>
+                            <constraint firstItem="8Gn-Tk-62a" firstAttribute="top" secondItem="mNM-ze-Gl3" secondAttribute="bottom" constant="156.5" id="PHk-Jy-tmj"/>
                             <constraint firstItem="R4F-Sc-AML" firstAttribute="top" secondItem="AsP-dD-S3A" secondAttribute="bottom" constant="104" id="aUk-ML-CrX"/>
+                            <constraint firstItem="8Gn-Tk-62a" firstAttribute="centerX" secondItem="Eav-wJ-kKZ" secondAttribute="centerX" id="bTQ-fL-8o4"/>
                             <constraint firstItem="mNM-ze-Gl3" firstAttribute="centerX" secondItem="Eav-wJ-kKZ" secondAttribute="centerX" id="eI5-mD-Se1"/>
                             <constraint firstItem="mNM-ze-Gl3" firstAttribute="top" secondItem="I78-wW-83g" secondAttribute="top" constant="51" id="ftK-Pp-0pm"/>
                             <constraint firstItem="hQX-W5-vz9" firstAttribute="top" secondItem="mNM-ze-Gl3" secondAttribute="bottom" constant="50.5" id="gJc-0T-ZjR"/>
                             <constraint firstItem="I78-wW-83g" firstAttribute="trailing" secondItem="Jgr-4c-vx4" secondAttribute="trailing" constant="16" id="hoc-E3-upd"/>
                             <constraint firstItem="AsP-dD-S3A" firstAttribute="top" secondItem="hQX-W5-vz9" secondAttribute="bottom" constant="43" id="ldk-aD-dnZ"/>
                             <constraint firstItem="Jgr-4c-vx4" firstAttribute="top" secondItem="I78-wW-83g" secondAttribute="top" constant="16" id="vcS-v8-hAW"/>
+                            <constraint firstItem="8Gn-Tk-62a" firstAttribute="leading" secondItem="I78-wW-83g" secondAttribute="leading" constant="177" id="wG0-4C-T8b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I78-wW-83g"/>
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="fOv-nK-1Qw" id="gX3-2L-BrG"/>
                         <outlet property="passTxt" destination="5yo-aJ-y6T" id="NCD-C4-kWY"/>
+                        <outlet property="spinner" destination="8Gn-Tk-62a" id="QPa-gR-DB4"/>
                         <outlet property="userImg" destination="vcE-g5-rty" id="Hk7-Dn-e3f"/>
                         <outlet property="usernameTxt" destination="kqF-gn-uh9" id="rZB-Fy-HPG"/>
                         <segue destination="zTO-Zd-Omx" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSeque:" id="o2g-EN-Ksr"/>
