@@ -62,4 +62,12 @@ class UserDataService {
         
         return newUIColor
     }
+    
+    func clearUser() {
+        id = ""
+        avatarColor = ""
+        avatarName = ""
+        email = ""
+        name = ""
+    }
 }
