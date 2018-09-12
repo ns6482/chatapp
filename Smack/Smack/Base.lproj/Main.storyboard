@@ -227,6 +227,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jQV-HA-1QP">
+                                <rect key="frame" x="169.5" y="265.5" width="37" height="37"/>
+                                <color key="color" red="0.42352941179999998" green="0.61960784310000006" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -239,12 +243,15 @@
                             <constraint firstItem="lan-pE-D1A" firstAttribute="trailing" secondItem="1Qt-Tg-DKj" secondAttribute="trailing" constant="16" id="d1d-VX-JUp"/>
                             <constraint firstItem="xfq-tz-ILC" firstAttribute="top" secondItem="lan-pE-D1A" secondAttribute="top" constant="39" id="eYq-dS-Sg6"/>
                             <constraint firstItem="xfq-tz-ILC" firstAttribute="centerX" secondItem="4iz-8i-VWJ" secondAttribute="centerX" id="fAe-6W-Wi3"/>
+                            <constraint firstItem="jQV-HA-1QP" firstAttribute="centerX" secondItem="4iz-8i-VWJ" secondAttribute="centerX" id="pT6-up-nZ8"/>
                             <constraint firstItem="mb7-Ll-2Zg" firstAttribute="top" secondItem="1Qt-Tg-DKj" secondAttribute="bottom" constant="102" id="rXz-wV-exj"/>
+                            <constraint firstItem="jQV-HA-1QP" firstAttribute="centerY" secondItem="4iz-8i-VWJ" secondAttribute="centerY" constant="-50" id="rx8-Wa-wb7"/>
                             <constraint firstItem="5cI-J8-hxq" firstAttribute="centerX" secondItem="4iz-8i-VWJ" secondAttribute="centerX" id="xBI-tf-wP3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lan-pE-D1A"/>
                     </view>
                     <connections>
+                        <outlet property="loginLoader" destination="jQV-HA-1QP" id="4ih-Kh-bha"/>
                         <outlet property="passwordTxt" destination="yOk-b4-1Dp" id="fJn-TN-szw"/>
                         <outlet property="usernameTxt" destination="LFO-bN-hyy" id="SjJ-S8-Ext"/>
                         <segue destination="j4E-XQ-Ed3" kind="show" identifier="toCreateAccount" id="Yjg-QS-r3d"/>
